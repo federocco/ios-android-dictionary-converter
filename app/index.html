@@ -26,51 +26,88 @@
 <!-- NAVBAR
 ================================================== -->
 <body>
-	 <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">iOS/Android Dictionary Converter</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="mailto:xxx@gmail.com">Contact Us</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
 
-    <div class="container">
+	<div class="container">
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+		<div class="starter-template">
+			<h1>iOS/Android NSDictionary to XML converter</h1>
+			<p class="lead">
+				This is a simple NSDictionary to XML converter, to convert localisations between XCode strings format and Eclipse string resources in XML format.
+It is a tool for app developers to easily reuse the localizable strings of iOS and Android projects.
+			</p>
+		</div>
 
-        <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <textarea class="form-control" rows="30" id="textarea-ios"></textarea>
-          <br />
-          <p class="text-right"><button type="button" class="btn btn-primary btn-lg" id="ios-to-android">Convert to Android -></button></p>
-        </div>
-        <div class="col-md-6">
-          <textarea class="form-control" rows="30" id="textarea-android"></textarea>
-          <br />
-          <p class="text-left"><button type="button" class="btn btn-primary btn-lg" id="android-to-ios"><- Convert to iOS</button></p>
-        </div>
-      </div>
-      
-    </div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Text to convert...</h3>
+					</div>
+					<div>
+						<textarea class="form-control text-source" rows="10"></textarea>
+					</div>
+				</div>
 
-    </div><!-- /.container -->
+				<p class="text-center" style="padding: 20px;">
+					<button type="button" class="btn btn-primary btn-lg  btn-block"
+						id="convert-btn">Convert!</button>
+				</p>
+			</div>
+
+			<!-- Result Box -->
+			<div class="row result-box">
+				<div class="col-xs-12 col-sm-6 col-md-8">
+					<div class="panel panel-success result-panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Result</h3>
+						</div>
+						<div class="result-text"></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-4">
+					<div class="panel panel-success stats">
+						<div class="panel-heading">
+							<h3 class="panel-title">Stats</h3>
+						</div>
+						<div>
+							<span><b>Total rows:</b></span>&nbsp;<span class="rows"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-4"></div>
+				<div class="col-xs-6 col-sm-4"></div>
+				<!-- Optional: clear the XS cols if their content doesn't match in height -->
+				<div class="clearfix visible-xs-block"></div>
+				<div class="col-xs-6 col-sm-4"></div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /.container -->
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
@@ -80,10 +117,10 @@
 	<script src="dist/bootstrap/js/bootstrap.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="dist/template/js/ie10-viewport-bug-workaround.js"></script>
-	
+
 	<!-- jQuery -->
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	
+
 	<!-- JS Functions -->
 	<script src="dist/template/js/index-functions.js"></script>
 </body>
